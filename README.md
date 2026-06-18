@@ -92,8 +92,7 @@ ORDER BY
     demand_count DESC
 LIMIT 5;
 ```
-*Table of the demand for the top 5 skills in data analyst job postings*
-
+*Table of demand for the top 5 skills in data analyst job postings*
 
 | Skills   | Demand Count |
 |----------|--------------|
@@ -102,7 +101,6 @@ LIMIT 5;
 | Python   | 4330         |
 | Tableau  | 3745         |
 | Power BI | 2609         |
-
 
 ### 4. High-Value Skills (Top Salaries)
 * **Objective**: Analyze the average salary associated with individual skills to see which expertise drives higher paycheck values regardless of volume.
@@ -122,10 +120,8 @@ GROUP BY
 ORDER BY
     avg_salary DESC
 LIMIT 25;
-
 ```
-
-*Table of the average salary for the top 10 paying skills for data analysts*
+*Table of average salary for the top 10 paying skills for data analysts*
 
 | Skills        | Average Salary ($) |
 |---------------|-------------------:|
@@ -140,7 +136,6 @@ LIMIT 25;
 | pandas        |            151,821 |
 | elasticsearch |            145,000 |
 
-*Table of the average salary for the top 10 paying skills for data analysts*
 ### 5. The Sweet Spot: Optimal Skills
 * **Objective**: Find the "optimal" skills—those that have both a high volume of demand and command competitive, above-average salaries.
 * **Technical Highlight**: This analysis showcases Query Optimization. The initial logic was developed using two independent CTEs joined together. It was then completely refactored into a concise single-block query utilizing a `HAVING` clause for identical performance and cleaner readability.
@@ -253,7 +248,22 @@ ORDER BY
     avg_salary DESC
 LIMIT 25;
 ```
+### 📊 India Market Results (Cleaned Data)
 
+Here is a sample of the top findings from the localized analysis, showing the real-world demand and salary trends across core domestic tech hubs:
+
+| skill_id | skills | local_demand | avg_salary ($) | demand_count |
+| :--- | :--- | :--- | :--- | :--- |
+| 181 | excel | Chennai, Tamil Nadu, India | 105,846 | 6 |
+| 0 | sql | Bengaluru, Karnataka, India | 101,365 | 12 |
+| 1 | python | Pune, Maharashtra, India | 101,046 | 6 |
+| 0 | sql | Pune, Maharashtra, India | 99,267 | 6 |
+| 1 | python | Bengaluru, Karnataka, India | 95,933 | 10 |
+| 0 | sql | India | 85,397 | 9 |
+| 181 | excel | India | 84,366 | 8 |
+| 181 | excel | Bengaluru, Karnataka, India | 80,856 | 8 |
+| 5 | r | Bengaluru, Karnataka, India | 79,729 | 6 |
+| 1 | python | India | 77,186 | 6 |
 ---
 
 ## 🧠 Key Takeaways & Strategic Conclusions
