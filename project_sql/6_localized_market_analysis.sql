@@ -22,7 +22,7 @@ GROUP BY
     sd.skill_id,
     job_location
 HAVING
-    COUNT(sjd.job_id) > 5
+    COUNT(sjd.job_id) > 6
 ORDER BY
     avg_salary DESC
 LIMIT 25
